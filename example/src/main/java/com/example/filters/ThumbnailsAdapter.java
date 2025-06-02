@@ -1,12 +1,11 @@
 package com.example.filters;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.nineoldandroids.view.ViewHelper;
 
 import java.util.List;
 
@@ -57,8 +56,8 @@ public class ThumbnailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     private void setAnimation(View viewToAnimate, int position) {
         {
-            ViewHelper.setAlpha(viewToAnimate, .0f);
-            com.nineoldandroids.view.ViewPropertyAnimator.animate(viewToAnimate).alpha(1).setDuration(250).start();
+            viewToAnimate.setAlpha(.0f);
+            viewToAnimate.animate().alpha(1).setDuration(250).start();
             lastPosition = position;
         }
     }
